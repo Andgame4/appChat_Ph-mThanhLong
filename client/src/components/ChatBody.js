@@ -1,7 +1,7 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
 
-const ChatBody = ({messages, typingStatus, lastMessageRef}) => {
+const ChatBody = ({messages, typingStatus, lastMessageRef, receiver}) => {
     const navigate = useNavigate();
 
     const handleLeaveChat = () => {
@@ -13,7 +13,7 @@ const ChatBody = ({messages, typingStatus, lastMessageRef}) => {
     return (
         <>
             <header className="chat__mainHeader">
-                <p>Hangout with Colleagues</p>
+                <p>Hangout with {receiver.userName ? receiver.userName : 'Colleagues'}</p>
                 <button className="leaveChat__btn" onClick={handleLeaveChat}>
                     LEAVE CHAT
                 </button>

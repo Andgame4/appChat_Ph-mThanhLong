@@ -3,7 +3,7 @@ import Home from "./Home";
 import ChatPage from "./components/ChatPage";
 import socketIO from "socket.io-client";
 
-const socket = socketIO.connect("http://localhost:4000");
+const socket = socketIO.connect("http://locallhost:14444");
 function App() {
   return (
     <BrowserRouter>

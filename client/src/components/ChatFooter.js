@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
-const ChatFooter = ({ socket }) => {
+const ChatFooter = ({socket, receiver}) => {
     const [message, setMessage] = useState('');
 
     const handleTyping = () =>
@@ -14,6 +14,7 @@ const ChatFooter = ({ socket }) => {
                 name: localStorage.getItem('userName'),
                 id: `${socket.id}${Math.random()}`,
                 socketID: socket.id,
+                receiverId: receiver ? receiver.socketID : null
             });
         }
         setMessage('');

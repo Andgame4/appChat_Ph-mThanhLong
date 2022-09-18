@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 
+
 const Home = ({socket}) => {
     const navigate = useNavigate();
     const [userName, setUserName] = useState('');
@@ -20,6 +21,7 @@ const Home = ({socket}) => {
             <input
                 type="text"
                 minLength={6}
+                required="required"
                 name="username"
                 id="username"
                 className="username__input"
