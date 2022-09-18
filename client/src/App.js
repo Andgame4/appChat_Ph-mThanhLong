@@ -3,7 +3,7 @@ import Home from './Home';
 import ChatPage from './components/ChatPage';
 import socketIO from 'socket.io-client';
 
-const socket = socketIO.connect('http://54.254.219.139:14444');
+const socket = socketIO.connect('http://192.168.1.8:14444');
 function App() {
     return (
         <BrowserRouter>
